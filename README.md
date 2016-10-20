@@ -13,7 +13,7 @@
 现在网上有不少nodejs的学习资料，不过很多都是用的早期的Nodejs版本，Nodejs在4的时候改了不少地方，所以很多资料都不能用了，我这个项目
 用的是nodejs4.6,还算比较新
 
->node_modules我就不上传了，package.json里都有，直接npm install一下即可，宿舍的小水管上传起来太慢了。。还有下载后要运行的，必须要配置数据库，不然是运行不了
+>node_modules我就不上传了，package.json里都有，直接npm install一下即可，宿舍的小水管上传起来太慢了。。还有下载后要运行的，必须要配置数据库，不然运行不了
 
 >网站的截图在screenshot文件夹中
   
