@@ -18,22 +18,22 @@
   
   
 
-1. 异步 eventproxy
+1. 异步 eventproxy  
 userDao.js中包含了网站的逻辑操作和数据库操作，涉及了大量异步行为，开始不了解的情况下，用计数器来解决异步问题，现在项目中使用的是
 eventproxy，一个通过事件实现异步协作的工具
 能用的工具还有很多，比如async,promise等，都可以了解
 
-2. 数据库 mysql
+2. 数据库 mysql  
 nodejs数据库的连接，操作
 配置文件 conf/db.js
 操作 dao/userDao.js   dao/userSqlMapping.js
 
-3. phantomjs
+3. phantomjs  
 spider文件夹中是爬虫文件
 一开始我用的是superagent与cheerio来写爬虫，但发现爬下来的页面没有实时信息，才发现直播平台的数据都是用js异步加载的，显然superagent与cheerio只能解析静态网页，后来才知道有Phantomjs这么个东西,一个服务器端的 JavaScript API 的 WebKit，可以解析网页的js
 这几个爬虫文件也是我花的时间最多的地方，因为一次只能爬取一张页面，所以爬虫文件还实现了按钮带点击，翻页，下拉等行为
 
-4. jade
+4. jade  
 express现在的模板引擎是jade，可以看看是怎么向jade传递数据的，有几种方法，我都在userDao.js和index.js中用过
 我还是不太习惯写jade，所以先写html，然后用[html2jade](http://html2jade.org/)转换成jade模板，不过每次修改的时候也还是不太方便
 
