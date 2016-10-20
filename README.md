@@ -33,12 +33,12 @@ nodejs数据库的连接，操作
 操作 dao/userDao.js   dao/userSqlMapping.js
 
 3. phantomjs  
-spider文件夹中是爬虫文件
-一开始我用的是superagent与cheerio来写爬虫，但发现爬下来的页面没有实时信息，才发现直播平台的数据都是用js异步加载的，显然superagent与cheerio只能解析静态网页，后来才知道有Phantomjs这么个东西,一个服务器端的 JavaScript API 的 WebKit，可以解析网页的js
+spider文件夹中是爬虫文件  
+一开始我用的是superagent与cheerio来写爬虫，但发现爬下来的页面没有实时信息，才发现直播平台的数据都是用js异步加载的，显然superagent与cheerio只能解析静态网页，后来才知道有Phantomjs这么个东西,一个服务器端的 JavaScript API 的 WebKit，可以解析网页的js  
 这几个爬虫文件也是我花的时间最多的地方，因为一次只能爬取一张页面，所以爬虫文件还实现了按钮带点击，翻页，下拉等行为
 
 4. jade  
-express现在的模板引擎是jade，可以看看是怎么向jade传递数据的，有几种方法，我都在userDao.js和index.js中用过
+express现在的模板引擎是jade，可以看看是怎么向jade传递数据的，有几种方法，我都在userDao.js和index.js中用过  
 我还是不太习惯写jade，所以先写html，然后用[html2jade](http://html2jade.org/)转换成jade模板，不过每次修改的时候也还是不太方便
 
 
@@ -47,7 +47,7 @@ express现在的模板引擎是jade，可以看看是怎么向jade传递数据�
 
 * 粗浅的了解了服务器端编程，对前后端协作也有了一点感觉
 
-* 通过这么一个比较完整的项目，实践了我之前学习的nodejs理论知识，同时也涉及了css与js一些平时很少应用的知识点(如cookie,ajax)的回顾，收获不小，不过这个项目的重点放在了服务器端，所以在页面设计上没有太用心
+* 通过这么一个比较完整的项目，实践了我之前学习的nodejs理论知识，同时也涉及了css与js一些平时很少应用的知识点(如cookie,ajax)的回顾，收获不小
 
 * 异步是Nodejs一个鲜明的特点，一开始写的时候很蛋疼，但掌握以后就收获了一种新的编程思维
 
