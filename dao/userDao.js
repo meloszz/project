@@ -368,8 +368,6 @@ module.exports = {
                             sum += (huomao) ? 1 : 0;
                             var huya = pattern_huya.test(data);
                             sum += (huya) ? 1 : 0;
-                            console.log("douyu:" + douyu + "   zhanqi:" + zhanqi + "   panda:" + panda + "   huomao:" + huomao + "huya:" + huya + "    " + sum);
-
                             var a;
                             var name = [], title = [], href = [], num = [], img = [], cate = [];
                             while (a = pattern_title.exec(data)) {
