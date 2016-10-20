@@ -7,7 +7,7 @@
 架构：nodejs4 + express4 + bootstrap + phantomjs + mysql + jade  
 
 
-这个网站是我几个月前在学了Nodejs之后写的，比网上用nodejs+express搭建的博客demo要复杂许多，常见的模块用了不少，整个网站写下来，
+这个网站是我几个月前在学了Nodejs之后写的，比网上用nodejs+express搭建的博客demo要复杂许多，常见的模块用了不少(具体请看package.json)，整个网站写下来，
 对于nodejs的异步编程也有了一个清晰的认识，学习了一种新的编程思维
 
 现在网上有不少nodejs的学习资料，不过很多都是用的早期的Nodejs版本，Nodejs在4的时候改了不少地方，所以很多资料都不能用了，我这个项目
