@@ -29,7 +29,6 @@ nodejs数据库的连接，操作
 3. phantomjs
 spider文件夹中是爬虫文件
 一开始我用的是superagent与cheerio来写爬虫，但发现爬下来的页面没有实时信息，才发现直播平台的数据都是用js异步加载的，显然superagent与cheerio只能解析静态网页，后来才知道有Phantomjs这么个东西,一个服务器端的 JavaScript API 的 WebKit，可以解析网页的js
-
 这几个爬虫文件也是我花的时间最多的地方，因为一次只能爬取一张页面，所以爬虫文件还实现了按钮带点击，翻页，下拉等行为
 
 4. jade
