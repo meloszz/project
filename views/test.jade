@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        title Document
+        link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='stylesheets/test.css')
+        link(rel='stylesheet', href='stylesheets/font-awesome.min.css')
+    body
+        div(style='position:fixed;top:10px;right:20px;')
+            i.fa.fa-user(aria-hidden='true')
+            span(style='margin-right:10px;') 569915990
+            .quit(href='#', style='color:black;text-decoration:none;display:inline-block;cursor:pointer;')
+                i.fa.fa-wheelchair(aria-hidden='true')
+                span 退出
+        .side-tools-bar
+            a(href='/')
+                .head-title
+                    | 聚合直播
+            .items-container
+                a(href='/')
+                    - if(selected == 1)
+                     .items.selected 正在直播
+                    - else
+                     .items 正在直播
+                a(href='/mycollections')
+                    - if(selected == 2)
+                     .items.selected 我的关注
+                    - else
+                     .items 我的关注
+                a(href='#')
+                    .items 热门直播
+                a(href='#')
+                    .items 意见反馈
+        .container-fluid.main-div
+            .row
+                for d in data
+                    .col-xs-3.items
+                        a(href=d.href, target='_blank',rel='external')
+                            img.video-img(src=d.img, alt=d.img)
+                            .info-container
+                                .ov
+                                    .video-title.fl #{d.title}
+                                    .fr.video-type #{d.cate}
+                                div
+                                    .fl.video-name #{d.name}
+                                    .fr.video-number #{d.num}
+    script.
+        console.log(document.body.clientHeight);
+        document.querySelector(".main-div").style.minHeight = document.documentElement.clientHeight  + 'px';
+    script(src='javascripts/quit.js')
+        
+

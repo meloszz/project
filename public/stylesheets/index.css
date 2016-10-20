@@ -1,0 +1,34 @@
+.headerform {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container {
+    background: #f9f9f9;
+}
+
+.img {
+    width: 100%;
+}
+
+.fl {
+    float : left;
+}
+
+.fr {
+    float : right;
+}
+
+.clr {
+    clear: both;
+}
+
+.bw {
+    background: white;
+    overflow: hidden;
+}
+
+.col-xs-3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

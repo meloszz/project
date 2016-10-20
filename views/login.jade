@@ -1,0 +1,94 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Document
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+    style.
+      .btn {
+      background-color: #0f88eb;
+      box-shadow:none;
+      border:none;
+      border-radius:2px;
+      color:#fff;
+      width:20em;
+      line-height: 2.5em;
+      margin-top: 20px;
+      }
+      .header {
+      margin: auto;
+      width: 20em;
+      padding-bottom: 1em;
+      }
+      .logo {
+      margin-top: 2em;
+      font-size: 3em;
+      text-align: center;
+      color: #0f88eb;
+      }
+      .header_left:hover,.header_right:hover {
+      cursor: pointer;
+      }
+      .head_button {
+      font-size: 1.4em;
+      line-height: 3em;
+      padding-bottom: 5px;
+      }
+      .selected {
+      color: #0f88eb;
+      border-bottom: 2px solid #4886b7;
+      }
+      #username,#password,#email {
+      width: 20em;
+      line-height: 2.5em;
+      padding-left: 12px;
+      background-color: #fff;
+      outline: none;
+      }
+      #username,#password {
+      margin-bottom: -1px;
+      }
+      .hidden {
+      display: none;
+      }
+  body
+    .wrapper
+      .header(value="#{cate}")
+        .logo(value="#{tip}")
+          span
+            | 聚合直播
+        .row
+          .col-xs-6.header_left(style='text-align:right;', onclick='javascript:toggle(this)')
+            span#login.head_button.selected 登陆
+          .col-xs-6.header_right(style='text-align:left;', onclick='javascript:toggle(this)')
+            span#signup.head_button 注册
+      form#form_login(action='/login', method='post', style='text-align:center;')
+        div
+          input#username(type='text', name='username', placeholder='用户名')
+        div
+          input#password(type='password', name='password', placeholder='密码')
+        .sub_wrapper
+          button.btn.btn_login(value='登陆') 登陆
+          //- input.btn.btn_login(type='submit', value='登 陆')
+      form#form_signup.hidden(action='/signup', method='post', style='text-align:center;')
+        div
+          input#username(type='text', name='username', placeholder='用户名/登录名,6到19位英文,数字和下划线组成',pattern='[\\w]{6,19}', title="请使用6到19位英文，数字和下划线组成用户名")
+        div
+          input#password(type='password', name='password', placeholder='密码,6到19位英文,数字和下划线组成',pattern='[\\w]{6,19}',title="请使用6到19位英文，数字和下划线组成密码")
+        div
+          input#email(type='text', name='email', placeholder='联系邮箱',pattern='^([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$', title='请使用正确的邮箱')
+        .sub_wrapper
+          button.btn.btn_signup(value='注册') 注册
+          //- input.btn.btn_signup(type='submit', value='注 册')
+    script.
+      if("#{cate}"){
+      if("#{cate}" == "signup"){
+      console.log("22");
+      alert("#{tip}");
+      document.querySelector("#login").className = "head_button";
+      document.querySelector("#signup").className = "head_button selected";
+      document.querySelector("#form_login").className = "hidden";
+      document.querySelector("#form_signup").className = "";
+      }
+      }
+    script(src='javascripts/login.js')

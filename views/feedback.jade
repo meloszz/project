@@ -1,0 +1,51 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        title Document
+        link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='stylesheets/test.css')
+        link(rel='stylesheet', href='stylesheets/font-awesome.min.css')
+    body
+        div(style='position:fixed;top:10px;right:20px;')
+            i.fa.fa-user(aria-hidden='true')
+            span(style='margin-right:10px;') 569915990
+            .quit(href='#', style='color:black;text-decoration:none;display:inline-block;cursor:pointer;')
+                i.fa.fa-wheelchair(aria-hidden='true')
+                span 退出
+        .side-tools-bar(value="#{tip}")
+            a(href='/')
+                .head-title
+                    | 聚合直播
+            .items-container
+                a(href='/')
+                    - if(selected == 1)
+                     .items.selected 正在直播
+                    - else
+                     .items 正在直播
+                a(href='/mycollections')
+                    - if(selected == 2)
+                     .items.selected 我的关注
+                    - else
+                     .items 我的关注
+                a(href='#')
+                    .items 编辑
+                a(href='/feedback')
+                    .items.selected 意见反馈
+        div(style='margin: 150px 100px 0 300px;font-size:20px;')
+            div
+                | 联系方式
+            div
+                | 邮箱：szzwrzy@hotmail.com
+            div
+                | 声明：
+                br
+                | 1.网站目前处于测试阶段，可能在使用中会出现一定的bug，希望大家谅解。
+                br
+                |                     2.如果有任何对于网站的功能，设计方面的建议，或者碰到了bug，请给我发邮件，最好附上碰到Bug的页面的截图和使用的设备，浏览器及版本号，非常感谢。
+                br
+                | 3.聚合直播收录了绝大部分斗鱼，战旗，火猫，熊猫，虎牙的直播间，但有极少部分人气较低的直播间出于综合考量，并没有进行收录，敬请谅解。
+    script(src='javascripts/quit.js')
+
