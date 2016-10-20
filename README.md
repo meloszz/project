@@ -4,14 +4,16 @@
 
 实现：用爬虫实时抓取各大直播平台的在线数据，存储在Mysql中，供用户查询
 
-架构：nodejs4 + express4 + phantomjs + mysql + jade
+架构：nodejs4 + express4 + phantomjs + mysql + jade  
+
 
 这个网站是我几个月前在学了Nodejs之后写的，比网上用nodejs+express搭建的博客demo要复杂许多，常见的模块用了不少，整个网站写下来，
 对于nodejs的异步编程也有了一个清晰的认识，也有了一种新的编程思维
 
 现在网上有不少nodejs的学习资料，不过很多都是用的早期的Nodejs版本，Nodejs在4的时候改了不少地方，所以很多资料都不能用了，我这个项目
 用的是nodejs4.6,还算比较新
-
+  
+  
 值得参考的几个地方：
 
 
